@@ -14,7 +14,9 @@
       </ol>
       <hr>
 
-      <app-game-control></app-game-control>
+      <app-game-control (numCount)="onNumberAdded($event)"></app-game-control>
+      <app-odd></app-odd>
+      <app-even></app-even>
 
   </div>
 </div>
