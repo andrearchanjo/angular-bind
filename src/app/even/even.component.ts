@@ -6,7 +6,5 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./even.component.css']
 })
 export class EvenComponent {
-  @Input('evenElement') element: {type: string, num: number};
-
-  @Output() numberCountDown = new EventEmitter<{numCount: number}>;
+  @Input('evenElement') element: {num: number};
 }

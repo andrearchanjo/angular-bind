@@ -9,6 +9,7 @@ export class GameControlComponent {
   @Output() numCount = new EventEmitter<{num: number}>;
   
   intervalCreated: any
+  isGameOn: boolean = false
   numberCount: number = 0
 
   onStartGame() {
@@ -21,9 +22,12 @@ export class GameControlComponent {
         num: this.numberCount
       })
     }, 1000);
+
+    this.isGameOn = true
   }
 
   onStopGame() {
     clearInterval(this.intervalCreated)
+    this.isGameOn = false
   }
 }
